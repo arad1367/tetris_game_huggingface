@@ -48,6 +48,12 @@ A classic Tetris game implemented in Python using the Pygame library. This game 
 ## Contributing
 - If you want to contribute to this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
+## Hugging Face version
+For Hugging face deployment:
+- Make a new space
+- Use static template - blank
+- Upload `index.html`, images and music.
+
 ## License
 - This project is licensed under the MIT License
 
