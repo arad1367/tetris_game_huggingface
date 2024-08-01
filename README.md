@@ -55,6 +55,7 @@ A classic Tetris game implemented in Python using the Pygame library. This game 
 - The Pygame library for creating the game interface and handling user input.
 - The classic Tetris game concept and design.
 - Thanks to Hugging face foe easy 5 stars deploy
+- The Tetris Theme A music is based on an old Russian folk song called "Korobeiniki" and was adapted for the classic game Tetris by Hirokazu Tanaka.
 
 ## Contact
 * For any questions or feedback, please contact pejman.ebrahimi77@gmail.com

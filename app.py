@@ -239,6 +239,12 @@ def main():
     clock = pygame.time.Clock()
     game = Tetris(20, 10)
 
+    # Initialize the mixer and load music
+    pygame.mixer.init()
+    pygame.mixer.music.load('music.mp3')
+    pygame.mixer.music.set_volume(0.5)  # Set volume to 50%
+    pygame.mixer.music.play(-1)  # Play music in a loop
+
     # Load background image
     background_image = pygame.image.load('images/tetris7.png')
     background_image = pygame.transform.scale(background_image, WINDOW_SIZE)
@@ -282,6 +288,7 @@ def main():
                     game = Tetris(20, 10)
                     game.username = username
                     game.state = "start"
+                    pygame.mixer.music.play(-1)  # Restart music on game restart
             if event.type == pygame.FINGERDOWN or event.type == pygame.FINGERMOTION:
                 handle_touch_event(event, game)
             if event.type == pygame.KEYUP:
@@ -295,6 +302,10 @@ def main():
                         game = Tetris(20, 10)
                         game.username = username
                         game.state = "start"
+                        pygame.mixer.music.play(-1)  # Restart music on game restart
+
+        if game.state == "gameover":
+            pygame.mixer.music.stop()  # Stop music on game over
 
         draw_text(screen, game, background_image)
         clock.tick(FPS)
